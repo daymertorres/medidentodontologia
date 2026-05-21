@@ -151,11 +151,12 @@
               bienestar.
             </p>
 
-            <form action="" class="hero-form">
-              <input type="email" name="email_address" aria-label="correo electrónico"
-                placeholder="Tu correo electrónico..." required class="email-field">
+            <form class="hero-form" onsubmit="return false;">
+              <input type="text" name="nombre" aria-label="tu nombre"
+                placeholder="Tu nombre..." required class="email-field" id="heroNameInput">
 
-              <button type="submit" class="btn">Solicitar llamada</button>
+              <a id="heroAgendarBtn" href="https://wa.me/51989800826?text=Hola%2C%20quisiera%20agendar%20una%20cita%20en%20su%20consultorio%20dental%20Medident"
+                target="_blank" class="btn" onclick="var n=document.getElementById('heroNameInput').value;if(n){this.href='https://wa.me/51989800826?text=Hola%2C%20soy%20'+encodeURIComponent(n)+'%2C%20quisiera%20agendar%20una%20cita%20en%20su%20consultorio%20dental%20Medident';}">Agendar cita</a>
             </form>
 
           </div>
